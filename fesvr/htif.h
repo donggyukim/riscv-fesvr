@@ -42,6 +42,11 @@ class htif_t
 
   std::string config_string;
 
+  addr_t get_tohost_addr() const { return tohost_addr; }
+  addr_t get_fromhost_addr() const { return fromhost_addr; }
+  int get_exitcode() const { return exitcode; }
+  device_list_t& get_device_list() { return device_list; }
+
  private:
   memif_t mem;
   bool writezeros;
